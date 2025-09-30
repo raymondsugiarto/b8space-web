@@ -20,21 +20,21 @@ const Contact = () => {
       icon: Mail,
       title: "Email Us",
       description: "Get in touch via email",
-      value: "hello@techsolutions.com",
-      action: "mailto:hello@techsolutions.com"
+      value: "hi.b8space@gmail.com",
+      action: "mailto:hi.b8space@gmail.com"
     },
     {
       icon: Phone,
       title: "Call Us",
       description: "Speak with our team",
-      value: "+1 (555) 123-4567",
-      action: "tel:+15551234567"
+      value: "+62 81-9181-8888-5",
+      action: "tel:+6281918188885"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      description: "Come to our office",
-      value: "Tech District, Innovation Center",
+      description: "Come to our Social Media",
+      value: "",
       action: "#"
     }
   ];
