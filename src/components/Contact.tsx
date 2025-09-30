@@ -27,8 +27,8 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       description: "Speak with our team",
-      value: "+62 81-9181-8888-5",
-      action: "tel:+6281918188885"
+      value: "+62 858-8812-3325",
+      action: "tel:+6285888123325"
     },
     {
       icon: MapPin,
