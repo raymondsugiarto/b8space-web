@@ -7,7 +7,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center gradient-hero relative overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-100 z-0"
         style={{
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
@@ -16,10 +16,10 @@ const Hero = () => {
       />
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 gradient-hero opacity-90" />
+      <div className="absolute inset-0 gradient-hero opacity-70 z-10" />
       
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">

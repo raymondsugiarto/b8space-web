@@ -21,19 +21,19 @@
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    /* Brand Colors - Tech Blue to Purple Gradient */
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 84% 4.9%;
-    --primary-hover: 217 91% 55%;
-    --primary-glow: 217 91% 70%;
+    /* Brand Colors - Green Theme */
+    --primary: 139 68% 32%;
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 139 68% 28%;
+    --primary-glow: 139 68% 45%;
 
-    /* Secondary - Vibrant Purple */
-    --secondary: 270 70% 55%;
+    /* Secondary - Dark Green */
+    --secondary: 139 40% 25%;
     --secondary-foreground: 210 40% 98%;
-    --secondary-hover: 270 70% 60%;
+    --secondary-hover: 139 40% 30%;
 
-    /* Accent - Electric Blue */
-    --accent: 200 100% 60%;
+    /* Accent - Bright Green */
+    --accent: 139 68% 50%;
     --accent-foreground: 222 84% 4.9%;
 
     /* Neutral System */
@@ -49,18 +49,18 @@
     /* Form Elements */
     --border: 222 47% 15%;
     --input: 222 47% 12%;
-    --ring: 217 91% 60%;
+    --ring: 139 68% 32%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 70% 55%));
+    --gradient-primary: linear-gradient(135deg, hsl(139 68% 32%), hsl(139 68% 45%));
     --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%), hsl(222 47% 8%));
     --gradient-card: linear-gradient(135deg, hsl(222 47% 8%), hsl(222 47% 12%));
-    --gradient-accent: linear-gradient(90deg, hsl(200 100% 60%), hsl(217 91% 60%));
+    --gradient-accent: linear-gradient(90deg, hsl(139 68% 50%), hsl(139 68% 32%));
 
     /* Shadows */
-    --shadow-primary: 0 10px 40px -15px hsl(217 91% 60% / 0.3);
+    --shadow-primary: 0 10px 40px -15px hsl(139 68% 32% / 0.3);
     --shadow-card: 0 4px 20px -2px hsl(222 84% 4.9% / 0.4);
-    --shadow-glow: 0 0 30px hsl(217 91% 70% / 0.4);
+    --shadow-glow: 0 0 30px hsl(139 68% 45% / 0.4);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
