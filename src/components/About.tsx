@@ -7,8 +7,11 @@ import {
   Trophy,
   CheckCircle2
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const About = () => {
+  const { ref: valuesRef, isVisible: valuesVisible } = useScrollAnimation(0.1);
+  
   const values = [
     {
       icon: Target,
@@ -72,8 +75,8 @@ const About = () => {
               
               <div className="space-y-3">
                 {achievements.map((achievement, index) => (
-                  <div key={index} className="flex items-center">
-                    <CheckCircle2 className="w-5 h-5 text-success mr-3 flex-shrink-0" />
+                  <div key={index} className="flex items-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}>
+                    <CheckCircle2 className="w-5 h-5 text-success mr-3 flex-shrink-0 animate-scale-in" style={{ animationDelay: `${index * 0.1 + 0.1}s`, animationFillMode: 'both' }} />
                     <span className="text-foreground">{achievement}</span>
                   </div>
                 ))}
@@ -82,11 +85,17 @@ const About = () => {
           </div>
 
           {/* Right Content - Values */}
-          <div>
+          <div ref={valuesRef}>
             <h3 className="text-2xl font-bold mb-8 text-foreground">Our Core Values</h3>
             <div className="grid gap-6">
               {values.map((value, index) => (
-                <Card key={index} className="gradient-card border-card-border hover:shadow-card transition-smooth">
+                <Card 
+                  key={index} 
+                  className={`gradient-card border-card-border hover:shadow-card transition-smooth opacity-0 ${
+                    valuesVisible ? 'animate-slide-in-right' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-10 h-10 rounded-lg gradient-primary flex items-center justify-center flex-shrink-0">

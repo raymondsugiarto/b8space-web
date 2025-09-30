@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out forwards;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 /* Modern Tech Company Design System - Digital & Professional */
 
 @layer base {
@@ -9,13 +56,13 @@
     /* Background System */
     --background: 222 84% 4.9%;
     --foreground: 210 40% 98%;
-    --surface: 222 47% 8%;
-    --surface-hover: 222 47% 12%;
+    --surface: 220 20% 18%;
+    --surface-hover: 220 20% 22%;
 
     /* Card System */
-    --card: 222 47% 8%;
+    --card: 220 20% 18%;
     --card-foreground: 210 40% 98%;
-    --card-border: 222 47% 15%;
+    --card-border: 220 15% 25%;
 
     /* Interactive Elements */
     --popover: 222 47% 8%;
@@ -47,8 +94,8 @@
     --success-foreground: 210 40% 98%;
 
     /* Form Elements */
-    --border: 222 47% 15%;
-    --input: 222 47% 12%;
+    --border: 220 15% 25%;
+    --input: 220 20% 15%;
     --ring: 139 68% 32%;
 
     /* Gradients */

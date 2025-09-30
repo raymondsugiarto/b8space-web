@@ -10,8 +10,11 @@ import {
   MessageSquare,
   Clock
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Contact = () => {
+  const { ref: contactRef, isVisible: contactVisible } = useScrollAnimation(0.1);
+  
   const contactInfo = [
     {
       icon: Mail,
@@ -133,9 +136,15 @@ const Contact = () => {
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div ref={contactRef} className="space-y-6">
               {contactInfo.map((info, index) => (
-                <Card key={index} className="gradient-card border-card-border hover:shadow-card transition-smooth group">
+                <Card 
+                  key={index} 
+                  className={`gradient-card border-card-border hover:shadow-card transition-smooth group opacity-0 ${
+                    contactVisible ? 'animate-slide-in-right' : ''
+                  }`}
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-smooth">

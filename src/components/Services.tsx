@@ -9,8 +9,12 @@ import {
   Shield,
   ArrowRight
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Services = () => {
+  const { ref: servicesRef, isVisible: servicesVisible } = useScrollAnimation(0.1);
+  const { ref: techRef, isVisible: techVisible } = useScrollAnimation(0.1);
+  
   const services = [
     {
       icon: Brain,
@@ -48,9 +52,15 @@ const Services = () => {
         </div>
 
         {/* Main Services */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        <div ref={servicesRef} className="grid md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
-            <Card key={index} className="gradient-card border-card-border hover:shadow-card transition-smooth group">
+            <Card 
+              key={index} 
+              className={`gradient-card border-card-border hover:shadow-card transition-smooth group opacity-0 ${
+                servicesVisible ? (index === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right') : ''
+              }`}
+              style={{ animationDelay: `${index * 0.2}s` }}
+            >
               <CardHeader>
                 <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth">
                   <service.icon className="w-6 h-6 text-primary-foreground" />
@@ -83,11 +93,14 @@ const Services = () => {
           <h3 className="text-xl font-semibold mb-8 text-foreground">
             Technologies We Master
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div ref={techRef} className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <div 
                 key={index} 
-                className="flex flex-col items-center p-6 surface rounded-xl border border-card-border hover:surface-hover transition-smooth group"
+                className={`flex flex-col items-center p-6 surface rounded-xl border border-card-border hover:surface-hover transition-smooth group opacity-0 ${
+                  techVisible ? 'animate-slide-in-up' : ''
+                }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center mb-3 group-hover:shadow-glow transition-smooth">
                   <tech.icon className="w-5 h-5 text-accent-foreground" />
