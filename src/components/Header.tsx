@@ -9,8 +9,8 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header className="fixed top-0 w-full z-50 surface/80 backdrop-blur-md border-b border-card-border">
-      <div className="container mx-auto px-6 py-4 bg-sky-900/50">
+    <header className="fixed top-0 w-full z-50 surface/80 backdrop-blur-md border-b border-card-border bg-sky-900/50">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
