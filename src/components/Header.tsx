@@ -92,17 +92,17 @@ const Header = () => {
           <nav className="md:hidden mt-4 py-4 space-y-4 border-t border-gray-200">
             <a
               href="/#home"
-              className="block text-gray-700 hover:text-primary transition-fast"
+              className="block text-white hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               Home
             </a>
             {/* Mobile Products */}
             <div className="space-y-2">
-              <div className="text-gray-700 font-medium">Products</div>
+              <div className="text-white font-medium">Products</div>
               <Link
                 to="/coffee-rider-app"
-                className="block pl-4 text-gray-600 hover:text-primary transition-fast"
+                className="block pl-4 text-primary hover:text-primary transition-fast"
                 onClick={toggleMenu}
               >
                 Coffee Rider App
@@ -110,21 +110,21 @@ const Header = () => {
             </div>
             <a
               href="/#services"
-              className="block text-gray-700 hover:text-primary transition-fast"
+              className="block text-white hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               Services
             </a>
             <a
               href="/#about"
-              className="block text-gray-700 hover:text-primary transition-fast"
+              className="block text-white hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               About
             </a>
             <a
               href="/#contact"
-              className="block text-gray-700 hover:text-primary transition-fast"
+              className="block text-white hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               Contact
