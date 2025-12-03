@@ -22,17 +22,15 @@ const CoffeeRiderApp = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
-      <header className="fixed top-0 w-full z-50 bg-amber-900/80 backdrop-blur-md border-b border-amber-200 shadow-sm">
+      {/* <header className="fixed top-0 w-full z-50 bg-amber-900/80 backdrop-blur-md border-b border-amber-200 shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 text-amber-100 hover:text-white transition-colors">
-              <ArrowLeft size={20} />
-              <span>Back to Home</span>
+              <span>&nbsp;</span>
             </Link>
-            <img src={logo} alt="Logo" className="h-8 w-auto" />
           </div>
         </div>
-      </header>
+      </header> */}
 
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-6">
