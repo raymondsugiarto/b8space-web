@@ -2,8 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Coffee, Smartphone, BarChart3, Users, Calculator, ArrowLeft, MessageCircle, Sparkles } from "lucide-react";
-import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
+import { Helmet } from "react-helmet-async";
 
 const CoffeeRiderApp = () => {
   const whatsappNumber = "6285888123325"; // Replace with actual WhatsApp number
@@ -20,6 +19,19 @@ const CoffeeRiderApp = () => {
   ];
 
   return (
+    <>
+      <Helmet>
+        <title>Coffee Rider App - Sistem Penjualan Coffee Mobile Shop</title>
+        <meta name="description" content="Coffee Rider App adalah sistem lengkap untuk rider coffee mobile shop. Catat penjualan harian, laporan otomatis untuk admin, dan perhitungan gaji yang akurat. Mulai dari Rp 150.000/bulan." />
+        <meta name="keywords" content="coffee rider app, coffee mobile shop, sistem penjualan kopi, aplikasi rider kopi, laporan penjualan kopi, manajemen coffee shop" />
+        <meta property="og:title" content="Coffee Rider App - Sistem Penjualan Coffee Mobile Shop" />
+        <meta property="og:description" content="Sistem lengkap untuk rider coffee mobile shop. Catat penjualan harian, laporan otomatis, dan perhitungan gaji. Early Bird hanya Rp 150.000/bulan!" />
+        <meta property="og:type" content="product" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Coffee Rider App - Sistem Penjualan Coffee Mobile Shop" />
+        <meta name="twitter:description" content="Sistem lengkap untuk rider coffee mobile shop. Catat penjualan harian, laporan otomatis, dan perhitungan gaji. Early Bird hanya Rp 150.000/bulan!" />
+      </Helmet>
+
     <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Header */}
       {/* <header className="fixed top-0 w-full z-50 bg-amber-900/80 backdrop-blur-md border-b border-amber-200 shadow-sm">
@@ -221,6 +233,7 @@ const CoffeeRiderApp = () => {
         <p>&copy; 2025 Coffee Rider App. All rights reserved.</p>
       </footer>
     </div>
+    </>
   );
 };
 
