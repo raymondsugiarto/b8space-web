@@ -1,4 +1,6 @@
-import { useEffect, useRef, useState } from 'react';
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 
 export const useScrollAnimation = (threshold = 0.1) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -11,7 +13,7 @@ export const useScrollAnimation = (threshold = 0.1) => {
           setIsVisible(true);
         }
       },
-      { threshold }
+      { threshold },
     );
 
     const currentRef = ref.current;

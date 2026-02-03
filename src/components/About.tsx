@@ -1,38 +1,38 @@
+"use client";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Users, 
-  Target, 
-  Lightbulb, 
-  Trophy,
-  CheckCircle2
-} from "lucide-react";
+import { Users, Target, Lightbulb, Trophy, CheckCircle2 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const About = () => {
   const { ref: valuesRef, isVisible: valuesVisible } = useScrollAnimation(0.1);
-  
+
   const values = [
     {
       icon: Target,
       title: "Excellence",
-      description: "We deliver exceptional solutions with attention to detail and commitment to quality."
+      description:
+        "We deliver exceptional solutions with attention to detail and commitment to quality.",
     },
     {
       icon: Lightbulb,
       title: "Innovation",
-      description: "We stay ahead with cutting-edge technologies and creative problem-solving approaches."
+      description:
+        "We stay ahead with cutting-edge technologies and creative problem-solving approaches.",
     },
     {
       icon: Users,
       title: "Collaboration",
-      description: "We work closely with our clients as partners in their digital transformation journey."
+      description:
+        "We work closely with our clients as partners in their digital transformation journey.",
     },
     {
       icon: Trophy,
       title: "Results",
-      description: "We focus on delivering measurable outcomes that drive real business value."
-    }
+      description:
+        "We focus on delivering measurable outcomes that drive real business value.",
+    },
   ];
 
   const achievements = [
@@ -40,7 +40,7 @@ const About = () => {
     "Agile and DevOps methodologies",
     "Continuous integration and deployment",
     "Scalable and maintainable code architecture",
-    "24/7 technical support and maintenance"
+    "24/7 technical support and maintenance",
   ];
 
   return (
@@ -49,11 +49,16 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            About <span className="gradient-primary bg-clip-text text-transparent">Our Company</span>
+            About{" "}
+            <span className="gradient-primary bg-clip-text text-transparent">
+              Our Company
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We are a dynamic software company driven by innovation and excellence. Our team of skilled engineers 
-            combines technical expertise with business acumen to deliver transformative digital solutions.
+            We are a dynamic software company driven by innovation and
+            excellence. Our team of skilled engineers combines technical
+            expertise with business acumen to deliver transformative digital
+            solutions.
           </p>
         </div>
 
@@ -68,15 +73,29 @@ const About = () => {
                 Expertise That Drives Innovation
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our talented engineers bring years of experience in modern technologies and best practices. 
-                We pride ourselves on staying current with the latest developments in software engineering, 
+                Our talented engineers bring years of experience in modern
+                technologies and best practices. We pride ourselves on staying
+                current with the latest developments in software engineering,
                 ensuring our clients benefit from cutting-edge solutions.
               </p>
-              
+
               <div className="space-y-3">
                 {achievements.map((achievement, index) => (
-                  <div key={index} className="flex items-center animate-fade-in" style={{ animationDelay: `${index * 0.1}s`, animationFillMode: 'both' }}>
-                    <CheckCircle2 className="w-5 h-5 text-success mr-3 flex-shrink-0 animate-scale-in" style={{ animationDelay: `${index * 0.1 + 0.1}s`, animationFillMode: 'both' }} />
+                  <div
+                    key={index}
+                    className="flex items-center animate-fade-in"
+                    style={{
+                      animationDelay: `${index * 0.1}s`,
+                      animationFillMode: "both",
+                    }}
+                  >
+                    <CheckCircle2
+                      className="w-5 h-5 text-success mr-3 flex-shrink-0 animate-scale-in"
+                      style={{
+                        animationDelay: `${index * 0.1 + 0.1}s`,
+                        animationFillMode: "both",
+                      }}
+                    />
                     <span className="text-foreground">{achievement}</span>
                   </div>
                 ))}
@@ -86,13 +105,15 @@ const About = () => {
 
           {/* Right Content - Values */}
           <div ref={valuesRef}>
-            <h3 className="text-2xl font-bold mb-8 text-foreground">Our Core Values</h3>
+            <h3 className="text-2xl font-bold mb-8 text-foreground">
+              Our Core Values
+            </h3>
             <div className="grid gap-6">
               {values.map((value, index) => (
-                <Card 
-                  key={index} 
+                <Card
+                  key={index}
                   className={`gradient-card border-card-border hover:shadow-card transition-smooth opacity-0 ${
-                    valuesVisible ? 'animate-slide-in-right' : ''
+                    valuesVisible ? "animate-slide-in-right" : ""
                   }`}
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
@@ -102,8 +123,12 @@ const About = () => {
                         <value.icon className="w-5 h-5 text-primary-foreground" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-2">{value.title}</h4>
-                        <p className="text-sm text-muted-foreground">{value.description}</p>
+                        <h4 className="font-semibold text-foreground mb-2">
+                          {value.title}
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                          {value.description}
+                        </p>
                       </div>
                     </div>
                   </CardContent>
@@ -117,7 +142,9 @@ const About = () => {
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-card border border-card-border">
             <Users className="w-5 h-5 text-primary" />
-            <span className="text-foreground font-medium">Ready to work with a dedicated team?</span>
+            <span className="text-foreground font-medium">
+              Ready to work with a dedicated team?
+            </span>
           </div>
         </div>
       </div>

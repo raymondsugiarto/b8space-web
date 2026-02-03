@@ -1,7 +1,9 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
@@ -15,7 +17,10 @@ const Header = () => {
   // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsProductsOpen(false);
       }
     };
@@ -35,17 +40,23 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="/#home" className="text-white hover:text-primary transition-fast">
+            <a
+              href="/#home"
+              className="text-white hover:text-primary transition-fast"
+            >
               Home
             </a>
             {/* Products Dropdown - Click to toggle */}
             <div className="relative" ref={dropdownRef}>
-              <button 
+              <button
                 onClick={toggleProducts}
                 className="flex items-center gap-1 text-white hover:text-primary transition-fast"
               >
                 Products
-                <ChevronDown size={16} className={`transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform ${isProductsOpen ? "rotate-180" : ""}`}
+                />
               </button>
               {isProductsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 animate-fade-in">
@@ -55,25 +66,39 @@ const Header = () => {
                     className="block px-4 py-3 text-primary hover:bg-primary/10 hover:text-primary transition-colors"
                   >
                     <div className="font-medium">Coffee Rider App</div>
-                    <div className="text-xs text-gray-500">Coffee Mobile Shop System</div>
+                    <div className="text-xs text-gray-500">
+                      Coffee Mobile Shop System
+                    </div>
                   </Link>
                 </div>
               )}
             </div>
-            <a href="/#services" className="text-white hover:text-primary transition-fast">
+            <a
+              href="/#services"
+              className="text-white hover:text-primary transition-fast"
+            >
               Services
             </a>
-            <a href="/#about" className="text-white hover:text-primary transition-fast">
+            <a
+              href="/#about"
+              className="text-white hover:text-primary transition-fast"
+            >
               About
             </a>
-            <a href="/#contact" className="text-white hover:text-primary transition-fast">
+            <a
+              href="/#contact"
+              className="text-white hover:text-primary transition-fast"
+            >
               Contact
             </a>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button variant="default" className="gradient-primary hover:shadow-glow transition-smooth">
+            <Button
+              variant="default"
+              className="gradient-primary hover:shadow-glow transition-smooth"
+            >
               Get Started
             </Button>
           </div>
@@ -129,7 +154,10 @@ const Header = () => {
             >
               Contact
             </a>
-            <Button variant="default" className="w-full gradient-primary hover:shadow-glow transition-smooth">
+            <Button
+              variant="default"
+              className="w-full gradient-primary hover:shadow-glow transition-smooth"
+            >
               Get Started
             </Button>
           </nav>

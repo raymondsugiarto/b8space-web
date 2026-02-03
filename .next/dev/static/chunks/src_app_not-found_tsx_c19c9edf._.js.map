@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/raymondsugiarto/Documents/project/compro/b8space/src/app/not-found.tsx"],"sourcesContent":["\"use client\";\n\nimport { useEffect } from \"react\";\n\nexport default function NotFound() {\n  useEffect(() => {\n    console.error(\n      \"404 Error: User attempted to access non-existent route:\",\n      window.location.pathname,\n    );\n  }, []);\n\n  return (\n    <div className=\"flex min-h-screen items-center justify-center bg-gray-100\">\n      <div className=\"text-center\">\n        <h1 className=\"mb-4 text-4xl font-bold\">404</h1>\n        <p className=\"mb-4 text-xl text-gray-600\">Oops! Page not found</p>\n        <a href=\"/\" className=\"text-blue-500 underline hover:text-blue-700\">\n          Return to Home\n        </a>\n      </div>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAEA;;;AAFA;;AAIe,SAAS;;IACtB,IAAA,0KAAS;8BAAC;YACR,QAAQ,KAAK,CACX,2DACA,OAAO,QAAQ,CAAC,QAAQ;QAE5B;6BAAG,EAAE;IAEL,qBACE,6LAAC;QAAI,WAAU;kBACb,cAAA,6LAAC;YAAI,WAAU;;8BACb,6LAAC;oBAAG,WAAU;8BAA0B;;;;;;8BACxC,6LAAC;oBAAE,WAAU;8BAA6B;;;;;;8BAC1C,6LAAC;oBAAE,MAAK;oBAAI,WAAU;8BAA8C;;;;;;;;;;;;;;;;;AAM5E;GAnBwB;KAAA"}}]
+}

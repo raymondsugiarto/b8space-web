@@ -1,36 +1,31 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Github, 
-  Linkedin, 
-  Twitter, 
-  Mail,
-  ArrowUp
-} from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
 
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const socialLinks = [
     { icon: Github, href: "#", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "mailto:hello@techsolutions.com", label: "Email" }
+    { icon: Mail, href: "mailto:hello@techsolutions.com", label: "Email" },
   ];
 
   const quickLinks = [
     { name: "Home", href: "#home" },
     { name: "Services", href: "#services" },
     { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" }
+    { name: "Contact", href: "#contact" },
   ];
 
   const services = [
     { name: "Digitalization Advisory", href: "#services" },
     { name: "Application Development", href: "#services" },
     { name: "Cloud Solutions", href: "#services" },
-    { name: "Technical Consulting", href: "#services" }
+    { name: "Technical Consulting", href: "#services" },
   ];
 
   return (
@@ -44,10 +39,11 @@ const Footer = () => {
               TechSolutions
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              We're a software company building cutting-edge solutions with strong engineering talent, 
-              providing end-to-end digitalization services to transform your business.
+              We're a software company building cutting-edge solutions with
+              strong engineering talent, providing end-to-end digitalization
+              services to transform your business.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -102,7 +98,10 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-card-border">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex flex-wrap items-center gap-4">
-              <Badge variant="secondary" className="gradient-primary text-primary-foreground">
+              <Badge
+                variant="secondary"
+                className="gradient-primary text-primary-foreground"
+              >
                 Cutting-Edge Technology
               </Badge>
               <Badge variant="outline" className="border-card-border">
@@ -112,7 +111,7 @@ const Footer = () => {
                 End-to-End Solutions
               </Badge>
             </div>
-            
+
             {/* Scroll to Top */}
             <button
               onClick={scrollToTop}
@@ -129,9 +128,7 @@ const Footer = () => {
       <div className="border-t border-card-border">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <div>
-              © 2024 TechSolutions. All rights reserved.
-            </div>
+            <div>© 2024 TechSolutions. All rights reserved.</div>
             <div className="flex items-center space-x-6">
               <a href="#" className="hover:text-primary transition-fast">
                 Privacy Policy
