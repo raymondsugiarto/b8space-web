@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
@@ -35,7 +36,13 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logo} alt="TechSolutions Logo" className="h-16 w-auto" />
+            <Image
+              src={logo}
+              alt="TechSolutions Logo"
+              className="h-16 w-auto"
+              width={64}
+              height={64}
+            />
           </div>
 
           {/* Desktop Navigation */}
@@ -61,7 +68,7 @@ const Header = () => {
               {isProductsOpen && (
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 animate-fade-in">
                   <Link
-                    to="/coffee-rider-app"
+                    href="/coffee-rider-app"
                     onClick={() => setIsProductsOpen(false)}
                     className="block px-4 py-3 text-primary hover:bg-primary/10 hover:text-primary transition-colors"
                   >
@@ -126,7 +133,7 @@ const Header = () => {
             <div className="space-y-2">
               <div className="text-white font-medium">Products</div>
               <Link
-                to="/coffee-rider-app"
+                href="/coffee-rider-app"
                 className="block pl-4 text-primary hover:text-primary transition-fast"
                 onClick={toggleMenu}
               >

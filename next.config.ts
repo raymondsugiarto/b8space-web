@@ -1,31 +1,13 @@
 import path from "path";
-import { NextConfig } from "next";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
+  trailingSlash: true,
   reactStrictMode: true,
-  experimental: {
-    appDir: true,
-  },
   images: {
     domains: [],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/coffee-rider-app",
-        destination: "/coffee-rider-app",
-      },
-    ];
-  },
-  // Add empty turbopack config to silence webpack warning
-  turbopack: {},
-  // Support for absolute imports
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve(process.cwd(), "./src"),
-    };
-    return config;
+    unoptimized: true, // Required for static export
   },
 };
 
