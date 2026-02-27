@@ -1,4 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }],
-  "outputDirectory": "out"
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }
