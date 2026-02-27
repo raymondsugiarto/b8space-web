@@ -128,7 +128,7 @@ const Footer = () => {
       <div className="border-t border-card-border">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <div>© 2024 TechSolutions. All rights reserved.</div>
+            <div>© 2026 Solusi Digital Transformasi. All rights reserved.</div>
             <div className="flex items-center space-x-6">
               <a href="#" className="hover:text-primary transition-fast">
                 Privacy Policy
