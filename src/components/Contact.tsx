@@ -46,15 +46,23 @@ const Contact = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Let's{" "}
-            <span className="gradient-primary bg-clip-text text-transparent">
-              Work Together
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full surface border border-card-border mb-6">
+            <span className="w-2 h-2 rounded-full bg-accent" />
+            <span className="text-sm font-medium text-muted-foreground">
+              Start the Conversation
             </span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Let's Build{" "}
+            <span className="gradient-primary bg-clip-text text-transparent">
+              the Future
+            </span>{" "}
+            Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to transform your business with cutting-edge technology?
-            Contact our expert team to discuss your project requirements.
+            Ready to accelerate your digital transformation? Connect with our
+            team to explore how B8Space can help your organization transform,
+            automate, and scale.
           </p>
         </div>
 
@@ -63,12 +71,12 @@ const Contact = () => {
           <Card className="gradient-card border-card-border shadow-card">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-foreground">
-                <MessageSquare className="w-5 h-5 text-primary" />
+                <MessageSquare className="w-5 h-5 text-accent" />
                 Send us a Message
               </CardTitle>
               <CardDescription>
-                Tell us about your project and we'll get back to you within 24
-                hours.
+                Tell us about your transformation goals and our team will get
+                back to you within 24 hours.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -95,7 +103,7 @@ const Contact = () => {
 
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Email Address
+                  Work Email
                 </label>
                 <Input
                   type="email"
@@ -116,10 +124,10 @@ const Contact = () => {
 
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">
-                  Project Details
+                  How can we help?
                 </label>
                 <Textarea
-                  placeholder="Tell us about your project requirements, timeline, and goals..."
+                  placeholder="Tell us about your business objectives, current challenges, and the outcomes you're targeting..."
                   rows={4}
                   className="surface border-card-border focus:ring-primary resize-none"
                 />
@@ -139,8 +147,9 @@ const Contact = () => {
                 Get in Touch
               </h3>
               <p className="text-muted-foreground mb-8">
-                Our team is ready to help you bring your digital vision to life.
-                Choose the best way to reach us.
+                Whether you're exploring AI, modernizing your platforms, or
+                scaling operations, our team is ready to be your technology
+                partner.
               </p>
             </div>
 
@@ -148,7 +157,7 @@ const Contact = () => {
               {contactInfo.map((info, index) => (
                 <Card
                   key={index}
-                  className={`gradient-card border-card-border hover:shadow-card transition-smooth group opacity-0 ${
+                  className={`gradient-card border-card-border hover:shadow-card hover:border-primary/40 transition-smooth group opacity-0 ${
                     contactVisible ? "animate-slide-in-right" : ""
                   }`}
                   style={{ animationDelay: `${index * 0.15}s` }}
@@ -179,7 +188,7 @@ const Contact = () => {
             </div>
 
             {/* Response Time */}
-            <Card className="gradient-card border-card-border">
+            <Card className="gradient-card border-card-border hover:border-primary/40 transition-smooth">
               <CardContent className="p-6">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-lg gradient-accent flex items-center justify-center">
@@ -190,7 +199,7 @@ const Contact = () => {
                       Quick Response
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      We typically respond within 24 hours
+                      Our team typically responds within 24 hours
                     </p>
                   </div>
                 </div>

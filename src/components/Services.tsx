@@ -11,10 +11,9 @@ import { Button } from "@/components/ui/button";
 import {
   Brain,
   Code2,
+  Workflow,
   Database,
-  Smartphone,
   Cloud,
-  Shield,
   ArrowRight,
 } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
@@ -27,35 +26,59 @@ const Services = () => {
   const services = [
     {
       icon: Brain,
-      title: "Digitalization Advisory",
+      title: "Artificial Intelligence",
       description:
-        "Strategic consulting to transform your business processes with cutting-edge digital solutions and modern technology stacks.",
+        "Unlock intelligent decision-making and operational efficiency with AI assistants, generative AI, enterprise AI, and AI automation tailored to your business.",
       features: [
-        "Digital Strategy",
-        "Process Optimization",
-        "Technology Roadmap",
-        "Change Management",
+        "AI Assistants & Chatbots",
+        "Generative AI Solutions",
+        "Enterprise AI Integration",
+        "AI-Powered Automation",
       ],
     },
     {
       icon: Code2,
-      title: "Application Development",
+      title: "Software Engineering",
       description:
-        "Custom software development with modern frameworks and technologies, delivering scalable and maintainable solutions.",
+        "Engineer scalable, secure, and high-performance digital products — from web and mobile applications to SaaS platforms and custom enterprise systems.",
       features: [
-        "Web Applications",
-        "Mobile Apps",
-        "API Development",
-        "Microservices",
+        "Web & Mobile Applications",
+        "Enterprise Systems",
+        "SaaS Platforms",
+        "Custom Software",
+      ],
+    },
+    {
+      icon: Workflow,
+      title: "Business Automation",
+      description:
+        "Streamline operations and unlock productivity through intelligent workflow automation, process optimization, and RPA solutions that scale with your business.",
+      features: [
+        "Workflow Automation",
+        "Process Optimization",
+        "RPA Solutions",
+        "Operational Efficiency",
+      ],
+    },
+    {
+      icon: Database,
+      title: "Data & Analytics",
+      description:
+        "Turn data into a strategic advantage with business intelligence, data warehousing, dashboards, and analytics platforms that drive measurable outcomes.",
+      features: [
+        "Business Intelligence",
+        "Data Warehousing",
+        "Dashboard Development",
+        "Analytics Platforms",
       ],
     },
   ];
 
   const technologies = [
-    { icon: Database, name: "Database Solutions" },
-    { icon: Cloud, name: "Cloud Architecture" },
-    { icon: Smartphone, name: "Mobile Development" },
-    { icon: Shield, name: "Security & Compliance" },
+    { icon: Cloud, name: "Cloud & Infrastructure" },
+    { icon: Brain, name: "AI & Machine Learning" },
+    { icon: Database, name: "Data Engineering" },
+    { icon: Workflow, name: "Automation Platforms" },
   ];
 
   return (
@@ -63,16 +86,22 @@ const Services = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full surface border border-card-border mb-6">
+            <span className="w-2 h-2 rounded-full bg-accent" />
+            <span className="text-sm font-medium text-muted-foreground">
+              Our Capabilities
+            </span>
+          </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Our{" "}
+            Enterprise{" "}
             <span className="gradient-primary bg-clip-text text-transparent">
-              Services
+              Capabilities
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            We provide comprehensive digital solutions with our expert
-            engineering team, delivering end-to-end services to accelerate your
-            business transformation.
+            We deliver end-to-end technology solutions across AI, software
+            engineering, automation, data, and cloud — built to help enterprises
+            transform, automate, and scale.
           </p>
         </div>
 
@@ -81,14 +110,14 @@ const Services = () => {
           {services.map((service, index) => (
             <Card
               key={index}
-              className={`gradient-card border-card-border hover:shadow-card transition-smooth group opacity-0 ${
+              className={`gradient-card border-card-border hover:shadow-card hover:border-primary/40 transition-smooth group opacity-0 ${
                 servicesVisible
-                  ? index === 0
+                  ? index % 2 === 0
                     ? "animate-slide-in-left"
                     : "animate-slide-in-right"
                   : ""
               }`}
-              style={{ animationDelay: `${index * 0.2}s` }}
+              style={{ animationDelay: `${index * 0.15}s` }}
             >
               <CardHeader>
                 <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth">
@@ -108,14 +137,14 @@ const Services = () => {
                       key={idx}
                       className="flex items-center text-sm text-muted-foreground"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-accent mr-3" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Button
                   variant="outline"
-                  className="group border-card-border hover:surface-hover transition-smooth"
+                  className="group border-card-border hover:surface-hover hover:border-primary/50 transition-smooth"
                 >
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -128,13 +157,13 @@ const Services = () => {
         {/* Technologies */}
         <div className="text-center">
           <h3 className="text-xl font-semibold mb-8 text-foreground">
-            Technologies We Master
+            Core Technology Domains
           </h3>
           <div ref={techRef} className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center p-6 surface rounded-xl border border-card-border hover:surface-hover transition-smooth group opacity-0 ${
+                className={`flex flex-col items-center p-6 surface rounded-xl border border-card-border hover:surface-hover hover:border-primary/40 transition-smooth group opacity-0 ${
                   techVisible ? "animate-slide-in-up" : ""
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}

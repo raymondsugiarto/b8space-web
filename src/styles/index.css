@@ -6,15 +6,15 @@
   .animate-slide-in-left {
     animation: slideInLeft 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-in-up {
     animation: slideInUp 0.6s ease-out forwards;
   }
-  
+
   @keyframes slideInLeft {
     from {
       opacity: 0;
@@ -25,7 +25,7 @@
       transform: translateX(0);
     }
   }
-  
+
   @keyframes slideInRight {
     from {
       opacity: 0;
@@ -36,7 +36,7 @@
       transform: translateX(0);
     }
   }
-  
+
   @keyframes slideInUp {
     from {
       opacity: 0;
@@ -49,65 +49,85 @@
   }
 }
 
-/* Modern Tech Company Design System - Digital & Professional */
+/* B8Space Brand-Aligned Design System
+   Colors follow the official B8Space brand guidelines:
+   - Deep Blue   #003E9F  Primary branding, headlines, navigation, logo
+   - Brand Blue  #005CFF  Buttons, highlights, links, key actions
+   - Bright Cyan #27D8FF  Accent elements, AI messaging, innovation
+   - Light Cyan  #7BE7FF  Supporting graphics, visual highlights
+*/
 
 @layer base {
   :root {
-    /* Background System */
-    --background: 222 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --surface: 220 20% 18%;
-    --surface-hover: 220 20% 22%;
+    /* Background System - Light, B8Space White foundation (#FEFEFE) */
+    --background: 0 0% 99.6%;
+    --foreground: 222 47% 11%;
+    --surface: 210 40% 98%;
+    --surface-hover: 210 40% 94%;
 
     /* Card System */
-    --card: 220 20% 18%;
-    --card-foreground: 210 40% 98%;
-    --card-border: 220 15% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --card-border: 215 25% 88%;
 
     /* Interactive Elements */
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Brand Colors - Green Theme */
-    --primary: 139 68% 32%;
-    --primary-foreground: 210 40% 98%;
-    --primary-hover: 139 68% 28%;
-    --primary-glow: 139 68% 45%;
+    /* Primary - B8Space Brand Blue */
+    --primary: 218 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 216 100% 31%;
+    --primary-glow: 193 100% 58%;
 
-    /* Secondary - Dark Green */
-    --secondary: 139 40% 25%;
-    --secondary-foreground: 210 40% 98%;
-    --secondary-hover: 139 40% 30%;
+    /* Secondary - B8Space Deep Blue */
+    --secondary: 216 100% 31%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-hover: 216 90% 26%;
 
-    /* Accent - Bright Green */
-    --accent: 139 68% 50%;
-    --accent-foreground: 222 84% 4.9%;
+    /* Accent - B8Space Bright Cyan */
+    --accent: 193 100% 58%;
+    --accent-foreground: 222 47% 11%;
 
     /* Neutral System */
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 20% 40%;
 
     /* Functional Colors */
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
     --success: 142 76% 36%;
-    --success-foreground: 210 40% 98%;
+    --success-foreground: 0 0% 100%;
 
     /* Form Elements */
-    --border: 220 15% 25%;
-    --input: 220 20% 15%;
-    --ring: 139 68% 32%;
+    --border: 215 25% 88%;
+    --input: 0 0% 100%;
+    --ring: 218 100% 50%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(139 68% 32%), hsl(139 68% 45%));
-    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.9%), hsl(222 47% 8%));
-    --gradient-card: linear-gradient(135deg, hsl(222 47% 8%), hsl(222 47% 12%));
-    --gradient-accent: linear-gradient(90deg, hsl(139 68% 50%), hsl(139 68% 32%));
+    /* Gradients - B8Space brand gradient system (light-friendly) */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(216 100% 31%),
+      hsl(218 100% 50%)
+    );
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 99.6%), hsl(210 40% 96%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(210 40% 97%));
+    --gradient-accent: linear-gradient(
+      90deg,
+      hsl(218 100% 50%),
+      hsl(193 100% 58%)
+    );
+    --gradient-brand: linear-gradient(
+      135deg,
+      hsl(216 100% 31%),
+      hsl(218 100% 50%) 50%,
+      hsl(193 100% 58%)
+    );
 
-    /* Shadows */
-    --shadow-primary: 0 10px 40px -15px hsl(139 68% 32% / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(222 84% 4.9% / 0.4);
-    --shadow-glow: 0 0 30px hsl(139 68% 45% / 0.4);
+    /* Shadows - soft, light-theme friendly */
+    --shadow-primary: 0 10px 40px -15px hsl(218 100% 50% / 0.35);
+    --shadow-card: 0 4px 20px -2px hsl(222 47% 11% / 0.08);
+    --shadow-glow: 0 0 30px hsl(193 100% 58% / 0.45);
 
     /* Animation */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -133,7 +153,28 @@
   }
 
   .dark {
-    /* Dark mode is the default for this tech company theme */
+    /* Dark mode tokens kept available if toggled later */
+    --background: 222 47% 7%;
+    --foreground: 210 40% 98%;
+    --surface: 222 40% 12%;
+    --surface-hover: 222 40% 16%;
+    --card: 222 40% 11%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 215 28% 22%;
+    --popover: 222 47% 9%;
+    --popover-foreground: 210 40% 98%;
+    --primary-foreground: 210 40% 98%;
+    --secondary-foreground: 210 40% 98%;
+    --accent-foreground: 222 47% 7%;
+    --muted: 222 47% 14%;
+    --muted-foreground: 215 20% 70%;
+    --destructive-foreground: 210 40% 98%;
+    --success-foreground: 210 40% 98%;
+    --border: 215 28% 22%;
+    --input: 222 40% 12%;
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 7%), hsl(222 47% 11%));
+    --gradient-card: linear-gradient(135deg, hsl(222 47% 9%), hsl(222 47% 13%));
+    --shadow-card: 0 4px 20px -2px hsl(222 47% 7% / 0.4);
   }
 }
 
@@ -155,43 +196,47 @@
   .gradient-primary {
     background: var(--gradient-primary);
   }
-  
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
-  
+
   .gradient-card {
     background: var(--gradient-card);
   }
-  
+
   .gradient-accent {
     background: var(--gradient-accent);
   }
-  
+
+  .gradient-brand {
+    background: var(--gradient-brand);
+  }
+
   .shadow-primary {
     box-shadow: var(--shadow-primary);
   }
-  
+
   .shadow-card {
     box-shadow: var(--shadow-card);
   }
-  
+
   .shadow-glow {
     box-shadow: var(--shadow-glow);
   }
-  
+
   .transition-smooth {
     transition: var(--transition-smooth);
   }
-  
+
   .transition-fast {
     transition: var(--transition-fast);
   }
-  
+
   .surface {
     background-color: hsl(var(--surface));
   }
-  
+
   .surface-hover {
     background-color: hsl(var(--surface-hover));
   }

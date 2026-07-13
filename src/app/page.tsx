@@ -7,28 +7,26 @@ import Footer from "@/components/Footer";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title:
-    "B8Space - Cutting-Edge Software Development & Digitalization Services",
+  title: "B8Space — AI & Digital Transformation Partner",
   description:
-    "Transform your business with B8Space - expert software development, digitalization advisory, and application development services. End-to-end solutions with cutting-edge technology and skilled engineering team.",
+    "B8Space empowers organizations to accelerate digital transformation through AI, software engineering, automation, and scalable technology solutions that drive sustainable business growth.",
   keywords:
-    "software development, digitalization advisory, application development, technology consulting, engineering solutions, digital transformation, custom software, web development, mobile app development",
+    "digital transformation, artificial intelligence, AI solutions, business automation, software engineering, cloud solutions, data analytics, enterprise technology, technology consulting, AI integration",
   authors: [{ name: "B8Space" }],
   robots:
     "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   openGraph: {
     type: "website",
     url: "https://b8space.com/",
-    title:
-      "B8Space - Cutting-Edge Software Development & Digitalization Services",
+    title: "B8Space — Empowering Digital Advancement",
     description:
-      "Transform your business with expert software development and digitalization services. End-to-end solutions with cutting-edge technology and skilled engineering team.",
+      "B8Space partners with enterprises to accelerate digital transformation through AI, software engineering, automation, and scalable technology solutions.",
     images: [
       {
         url: "https://b8space.com/logo.png",
         width: 1200,
         height: 630,
-        alt: "B8Space Logo",
+        alt: "B8Space — Empowering Digital Advancement",
       },
     ],
     siteName: "B8Space",
@@ -36,9 +34,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "B8Space - Software Development & Digitalization",
+    title: "B8Space — Empowering Digital Advancement",
     description:
-      "Expert software development and digitalization advisory services with cutting-edge technology solutions.",
+      "B8Space partners with enterprises to accelerate digital transformation through AI, software engineering, automation, and scalable technology solutions.",
     images: ["https://b8space.com/logo.png"],
     creator: "@B8Space",
   },

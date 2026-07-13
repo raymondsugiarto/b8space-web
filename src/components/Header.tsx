@@ -31,17 +31,16 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 w-full z-50 surface/80 backdrop-blur-md border-b border-card-border bg-sky-900/50">
-      <div className="container mx-auto px-6 py-4">
+    <header className="fixed top-0 w-full z-50 surface/80 backdrop-blur-md border-b border-card-border bg-background/70">
+      <div className="container mx-auto px-6 py-1">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <Image
               src={logo}
-              alt="TechSolutions Logo"
-              className="h-16 w-auto"
-              width={64}
-              height={64}
+              alt="B8Space Logo"
+              className="h-20 w-auto"
+              priority
             />
           </div>
 
@@ -49,7 +48,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="/#home"
-              className="text-white hover:text-primary transition-fast"
+              className="text-foreground hover:text-primary transition-fast"
             >
               Home
             </a>
@@ -57,7 +56,7 @@ const Header = () => {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleProducts}
-                className="flex items-center gap-1 text-white hover:text-primary transition-fast"
+                className="flex items-center gap-1 text-foreground hover:text-primary transition-fast"
               >
                 Products
                 <ChevronDown
@@ -66,14 +65,16 @@ const Header = () => {
                 />
               </button>
               {isProductsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 py-2 z-50 animate-fade-in">
+                <div className="absolute top-full left-0 mt-2 w-56 surface rounded-lg shadow-xl border border-card-border py-2 z-50 animate-fade-in">
                   <Link
                     href="/coffee-rider-app"
                     onClick={() => setIsProductsOpen(false)}
-                    className="block px-4 py-3 text-primary hover:bg-primary/10 hover:text-primary transition-colors"
+                    className="block px-4 py-3 hover:bg-primary/10 transition-colors"
                   >
-                    <div className="font-medium">Coffee Rider App</div>
-                    <div className="text-xs text-gray-500">
+                    <div className="font-medium text-foreground">
+                      Coffee Rider App
+                    </div>
+                    <div className="text-xs text-muted-foreground">
                       Coffee Mobile Shop System
                     </div>
                   </Link>
@@ -82,19 +83,19 @@ const Header = () => {
             </div>
             <a
               href="/#services"
-              className="text-white hover:text-primary transition-fast"
+              className="text-foreground hover:text-primary transition-fast"
             >
-              Services
+              Capabilities
             </a>
             <a
               href="/#about"
-              className="text-white hover:text-primary transition-fast"
+              className="text-foreground hover:text-primary transition-fast"
             >
               About
             </a>
             <a
               href="/#contact"
-              className="text-white hover:text-primary transition-fast"
+              className="text-foreground hover:text-primary transition-fast"
             >
               Contact
             </a>
@@ -106,7 +107,7 @@ const Header = () => {
               variant="default"
               className="gradient-primary hover:shadow-glow transition-smooth"
             >
-              Get Started
+              Start Your Project
             </Button>
           </div>
 
@@ -121,20 +122,20 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 space-y-4 border-t border-gray-200">
+          <nav className="md:hidden mt-4 py-4 space-y-4 border-t border-card-border">
             <a
               href="/#home"
-              className="block text-white hover:text-primary transition-fast"
+              className="block text-foreground hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               Home
             </a>
             {/* Mobile Products */}
             <div className="space-y-2">
-              <div className="text-white font-medium">Products</div>
+              <div className="text-foreground font-medium">Products</div>
               <Link
                 href="/coffee-rider-app"
-                className="block pl-4 text-primary hover:text-primary transition-fast"
+                className="block pl-4 text-primary hover:text-primary-hover transition-fast"
                 onClick={toggleMenu}
               >
                 Coffee Rider App
@@ -142,21 +143,21 @@ const Header = () => {
             </div>
             <a
               href="/#services"
-              className="block text-white hover:text-primary transition-fast"
+              className="block text-foreground hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
-              Services
+              Capabilities
             </a>
             <a
               href="/#about"
-              className="block text-white hover:text-primary transition-fast"
+              className="block text-foreground hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               About
             </a>
             <a
               href="/#contact"
-              className="block text-white hover:text-primary transition-fast"
+              className="block text-foreground hover:text-primary transition-fast"
               onClick={toggleMenu}
             >
               Contact
@@ -165,7 +166,7 @@ const Header = () => {
               variant="default"
               className="w-full gradient-primary hover:shadow-glow transition-smooth"
             >
-              Get Started
+              Start Your Project
             </Button>
           </nav>
         )}

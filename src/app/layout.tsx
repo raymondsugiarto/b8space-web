@@ -6,8 +6,9 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "B8 Space",
-  description: "Professional services and solutions",
+  title: "B8Space — Empowering Digital Advancement",
+  description:
+    "B8Space is a technology and AI transformation company helping businesses transform, automate, and scale through AI, software engineering, automation, and intelligent digital solutions.",
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",

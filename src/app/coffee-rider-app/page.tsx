@@ -138,7 +138,7 @@ export default function CoffeeRiderAppPage() {
                       className="flex items-center gap-3 text-amber-800"
                     >
                       <Check
-                        className="text-green-600 flex-shrink-0"
+                        className="text-amber-700 flex-shrink-0"
                         size={20}
                       />
                       <span>{feature}</span>

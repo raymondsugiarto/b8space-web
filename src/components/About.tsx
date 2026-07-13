@@ -2,7 +2,13 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Users, Target, Lightbulb, Trophy, CheckCircle2 } from "lucide-react";
+import {
+  Rocket,
+  Target,
+  Lightbulb,
+  Handshake,
+  CheckCircle2,
+} from "lucide-react";
 import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const About = () => {
@@ -11,36 +17,36 @@ const About = () => {
   const values = [
     {
       icon: Target,
-      title: "Excellence",
+      title: "Strategic",
       description:
-        "We deliver exceptional solutions with attention to detail and commitment to quality.",
+        "We align technology with your business goals to deliver measurable outcomes and sustainable growth.",
     },
     {
       icon: Lightbulb,
-      title: "Innovation",
+      title: "Innovative",
       description:
-        "We stay ahead with cutting-edge technologies and creative problem-solving approaches.",
+        "We harness AI, automation, and modern engineering to keep your business ahead of the curve.",
     },
     {
-      icon: Users,
-      title: "Collaboration",
+      icon: Handshake,
+      title: "Partnership",
       description:
-        "We work closely with our clients as partners in their digital transformation journey.",
+        "We act as a long-term technology partner — embedded with your team, invested in your success.",
     },
     {
-      icon: Trophy,
-      title: "Results",
+      icon: Rocket,
+      title: "Scalable",
       description:
-        "We focus on delivering measurable outcomes that drive real business value.",
+        "We architect enterprise-grade solutions designed to evolve and scale with your organization.",
     },
   ];
 
   const achievements = [
-    "Industry-leading development practices",
-    "Agile and DevOps methodologies",
-    "Continuous integration and deployment",
-    "Scalable and maintainable code architecture",
-    "24/7 technical support and maintenance",
+    "Enterprise-grade AI, automation, and software engineering capabilities",
+    "Scalable architecture built for performance, security, and reliability",
+    "Strategic technology advisory aligned with business outcomes",
+    "Agile delivery with continuous integration and deployment",
+    "Long-term partnership focused on measurable business impact",
   ];
 
   return (
@@ -48,17 +54,24 @@ const About = () => {
       <div className="container mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            About{" "}
-            <span className="gradient-primary bg-clip-text text-transparent">
-              Our Company
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-card-border bg-background/40 mb-6">
+            <span className="w-2 h-2 rounded-full bg-accent" />
+            <span className="text-sm font-medium text-muted-foreground">
+              About B8Space
             </span>
+          </div>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            Your{" "}
+            <span className="gradient-primary bg-clip-text text-transparent">
+              Digital Transformation
+            </span>{" "}
+            Partner
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            We are a dynamic software company driven by innovation and
-            excellence. Our team of skilled engineers combines technical
-            expertise with business acumen to deliver transformative digital
-            solutions.
+            B8Space is a technology and AI transformation company that helps
+            organizations accelerate growth through software engineering,
+            artificial intelligence, automation, and digital innovation. We
+            bridge the gap between business goals and technology execution.
           </p>
         </div>
 
@@ -66,17 +79,20 @@ const About = () => {
           {/* Left Content */}
           <div>
             <div className="mb-8">
-              <Badge variant="secondary" className="mb-4">
-                Strong Engineering Team
+              <Badge
+                variant="secondary"
+                className="mb-4 gradient-primary text-primary-foreground"
+              >
+                Technology & AI Transformation
               </Badge>
               <h3 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
-                Expertise That Drives Innovation
+                Built for the Future of Enterprise
               </h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our talented engineers bring years of experience in modern
-                technologies and best practices. We pride ourselves on staying
-                current with the latest developments in software engineering,
-                ensuring our clients benefit from cutting-edge solutions.
+                B8Space was founded to help businesses navigate digital
+                transformation with confidence. We deliver scalable software,
+                AI-powered solutions, automation platforms, and data-driven
+                systems that create measurable business impact.
               </p>
 
               <div className="space-y-3">
@@ -90,7 +106,7 @@ const About = () => {
                     }}
                   >
                     <CheckCircle2
-                      className="w-5 h-5 text-success mr-3 flex-shrink-0 animate-scale-in"
+                      className="w-5 h-5 text-accent mr-3 flex-shrink-0 animate-scale-in"
                       style={{
                         animationDelay: `${index * 0.1 + 0.1}s`,
                         animationFillMode: "both",
@@ -112,7 +128,7 @@ const About = () => {
               {values.map((value, index) => (
                 <Card
                   key={index}
-                  className={`gradient-card border-card-border hover:shadow-card transition-smooth opacity-0 ${
+                  className={`gradient-card border-card-border hover:shadow-card hover:border-primary/40 transition-smooth opacity-0 ${
                     valuesVisible ? "animate-slide-in-right" : ""
                   }`}
                   style={{ animationDelay: `${index * 0.15}s` }}
@@ -141,9 +157,9 @@ const About = () => {
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full gradient-card border border-card-border">
-            <Users className="w-5 h-5 text-primary" />
+            <Rocket className="w-5 h-5 text-accent" />
             <span className="text-foreground font-medium">
-              Ready to work with a dedicated team?
+              Ready to build a future-ready business?
             </span>
           </div>
         </div>

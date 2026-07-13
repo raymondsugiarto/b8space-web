@@ -1,6 +1,7 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -8,24 +9,24 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "mailto:hello@techsolutions.com", label: "Email" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Github, href: "#", label: "GitHub" },
+    { icon: Mail, href: "mailto:hi.b8space@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
     { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
+    { name: "Capabilities", href: "#services" },
     { name: "About", href: "#about" },
     { name: "Contact", href: "#contact" },
   ];
 
   const services = [
-    { name: "Digitalization Advisory", href: "#services" },
-    { name: "Application Development", href: "#services" },
-    { name: "Cloud Solutions", href: "#services" },
-    { name: "Technical Consulting", href: "#services" },
+    { name: "Artificial Intelligence", href: "#services" },
+    { name: "Software Engineering", href: "#services" },
+    { name: "Business Automation", href: "#services" },
+    { name: "Data & Analytics", href: "#services" },
   ];
 
   return (
@@ -35,13 +36,16 @@ const Footer = () => {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-bold gradient-primary bg-clip-text text-transparent mb-4">
-              TechSolutions
+            <div className="text-2xl font-bold gradient-primary bg-clip-text text-transparent mb-2">
+              B8Space
             </div>
+            <p className="text-sm font-medium text-accent mb-4">
+              Empowering Digital Advancement
+            </p>
             <p className="text-muted-foreground mb-6 max-w-md">
-              We're a software company building cutting-edge solutions with
-              strong engineering talent, providing end-to-end digitalization
-              services to transform your business.
+              B8Space partners with organizations to build future-ready
+              businesses through AI, software engineering, automation, and
+              intelligent digital transformation.
             </p>
 
             {/* Social Links */}
@@ -65,12 +69,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-fast"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -78,16 +82,16 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
+            <h3 className="font-semibold text-foreground mb-4">Capabilities</h3>
             <ul className="space-y-3">
               {services.map((service, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={service.href}
                     className="text-muted-foreground hover:text-primary transition-fast"
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -102,13 +106,13 @@ const Footer = () => {
                 variant="secondary"
                 className="gradient-primary text-primary-foreground"
               >
-                Cutting-Edge Technology
+                Digital Transformation
               </Badge>
               <Badge variant="outline" className="border-card-border">
-                Expert Engineering Team
+                AI & Automation
               </Badge>
               <Badge variant="outline" className="border-card-border">
-                End-to-End Solutions
+                Enterprise Technology
               </Badge>
             </div>
 
@@ -128,7 +132,10 @@ const Footer = () => {
       <div className="border-t border-card-border">
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <div>© 2026 Solusi Digital Transformasi. All rights reserved.</div>
+            <div>
+              © 2026 B8Space. Empowering Digital Advancement. All rights
+              reserved.
+            </div>
             <div className="flex items-center space-x-6">
               <a href="#" className="hover:text-primary transition-fast">
                 Privacy Policy
