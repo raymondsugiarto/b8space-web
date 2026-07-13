@@ -36,7 +36,7 @@ const Contact = () => {
       icon: MapPin,
       title: "Visit Us",
       description: "Come to our Social Media",
-      value: "",
+      value: "b8space",
       action: "#",
     },
   ];
