@@ -11,8 +11,12 @@ export const metadata: Metadata = {
   description:
     "B8Space is a technology and AI transformation company helping businesses transform, automate, and scale through AI, software engineering, automation, and intelligent digital solutions.",
   icons: {
-    icon: logoPng.src,
-    shortcut: logoPng.src,
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+    ],
+    shortcut: "/favicon-32x32.png",
     apple: logoPng.src,
   },
 };
