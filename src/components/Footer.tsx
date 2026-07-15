@@ -9,9 +9,11 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Github, href: "#", label: "GitHub" },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/b8space.official",
+      label: "Instagram",
+    },
     { icon: Mail, href: "mailto:hi.b8space@gmail.com", label: "Email" },
   ];
 

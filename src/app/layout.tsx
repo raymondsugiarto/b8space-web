@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/index.css";
+import logoPng from "@/assets/logo.png";
 import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
   description:
     "B8Space is a technology and AI transformation company helping businesses transform, automate, and scale through AI, software engineering, automation, and intelligent digital solutions.",
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: logoPng.src,
+    shortcut: logoPng.src,
+    apple: logoPng.src,
   },
 };
 
